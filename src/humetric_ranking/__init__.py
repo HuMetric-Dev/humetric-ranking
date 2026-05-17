@@ -9,8 +9,11 @@ from humetric_ranking.errors import (
 )
 from humetric_ranking.features import (
     FEATURE_NAMES,
+    ORG_FEATURE_NAMES,
     FeatureRow,
+    OrgFeatureRow,
     build_feature_row,
+    build_feature_row_organization,
     stack_features,
 )
 from humetric_ranking.reranker import (
@@ -22,17 +25,20 @@ from humetric_ranking.reranker import (
 
 __all__ = [
     "FEATURE_NAMES",
+    "ORG_FEATURE_NAMES",
     "CrossEncoderReranker",
     "CrossEncoderUnavailable",
     "FeatureRow",
     "ModelLoadFailed",
     "ModelMissing",
+    "OrgFeatureRow",
     "PredictFailed",
     "RankingError",
     "Reranker",
     "TrainData",
     "TrainFailed",
     "build_feature_row",
+    "build_feature_row_organization",
     "load_cross_encoder",
     "load_reranker",
     "stack_features",
